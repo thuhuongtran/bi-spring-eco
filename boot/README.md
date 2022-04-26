@@ -395,4 +395,42 @@ class MyService {
     }
 }
 ```
+### Spring Boot Validation
+Spring Boot validation automatically imports the dependencies of javax.validation, javax.persistence
+```java
+<dependency> 
+    <groupId>org.springframework.boot</groupId> 
+    <artifactId>spring-boot-starter-validation</artifactId>
+    <version>2.3.12.RELEASE</version>
+</dependency>
+```
+```java
+@Entity
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    
+    @NotBlank(message = "Name is mandatory")
+    private String name;
+    
+    @NotBlank(message = "Email is mandatory")
+    private String email;
+    
+}
+
+@RestController
+public class UserController {
+
+    @PostMapping("/users")
+    ResponseEntity<String> addUser(@Valid @RequestBody User user) {
+        // persisting the user
+        return ResponseEntity.ok("User is valid");
+    }
+}
+
+```
+When Spring Boot finds an argument annotated with ```@Valid```, it automatically bootstraps the default JSR 380 implementation — Hibernate Validator — and validates the argument.
+
 _Source: Baeldung_
