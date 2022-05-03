@@ -1160,3 +1160,4 @@ public void loggerSink(String date) {
     logger.info("Received: " + date);
 }
 ```
+_Source: Baeldung, Spring Cloud docs_
