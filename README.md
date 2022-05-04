@@ -8,3 +8,4 @@ actuator, exception, cli with groovy, oauth2, validation, restapi test
 ### [Spring Session](https://github.com/thuhuongtran/bi-spring-eco/tree/master/session)
 ### [SpringFox Swagger Restdocs](https://github.com/thuhuongtran/bi-spring-eco/tree/master/springfox-swagger)
 ### [Spring Kafka](https://github.com/thuhuongtran/bi-spring-eco/tree/master/kafka)
+### [Spring Shell](https://github.com/thuhuongtran/bi-spring-eco/tree/master/shell)

@@ -54,3 +54,4 @@ public class SpringFoxConfig {
 }
 ```
 Swagger UI: `localhost:8080/swagger-ui/index.html`
+_Source: Baeldung, Spring docs_
